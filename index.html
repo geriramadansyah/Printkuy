@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrintKuy</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<header>
+
+  <div class="container navbar">
+
+    <div class="logo">
+      PrintKuy
+    </div>
+
+    <div class="menu-btn" id="menuBtn">
+      ☰
+    </div>
+
+  </div>
+
+</header>
+
+<div class="sidebar" id="sidebar">
+
+  <a href="#home" class="menu-link">Home</a>
+
+  <a href="#services" class="menu-link">Layanan</a>
+
+  <a href="#about" class="menu-link">Tentang</a>
+
+  <a href="#contact" class="menu-link">Kontak</a>
+
+  <a href="#cek" class="menu-link">Cek Pesanan</a>
+
+</div>
+
+<section class="hero" id="home">
+
+  <div class="container hero-content">
+
+    <div class="hero-text">
+
+      <h1>
+        Print Online Jadi Lebih Mudah
+      </h1>
+
+      <p>
+        Cetak banner, poster, kartu nama dan stiker
+        secara online dengan harga otomatis.
+      </p>
+
+    </div>
+
+    <div class="form-card" id="pesanan">
+
+      <h2>Form Pemesanan</h2>
+
+      <form id="orderForm">
+
+        <div class="form-group">
+          <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="kontak" placeholder="No WhatsApp / Email" required>
+        </div>
+
+        <div class="form-group">
+
+          <select id="layanan" required>
+
+            <option value="">
+              Pilih Layanan
+            </option>
+
+            <option value="Banner">
+              Banner
+            </option>
+
+            <option value="Poster">
+              Poster
+            </option>
+
+            <option value="Kartu Nama">
+              Kartu Nama
+            </option>
+
+            <option value="Stiker/Brosur">
+              Stiker/Brosur
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <select id="ukuran" required>
+
+            <option value="">
+              Pilih Ukuran
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+          <input type="number" id="jumlah" placeholder="Jumlah Pesanan" min="1" required>
+        </div>
+
+        <div class="form-group">
+          <textarea id="detail" rows="4" placeholder="Detail Pesanan" required></textarea>
+        </div>
+
+        <div class="harga-box">
+          Total Harga:
+          <span id="harga">Rp0</span>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Kirim Pesanan
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Layanan Kami</h2>
+
+      <p>
+        Berbagai layanan percetakan
+        untuk kebutuhan bisnis dan pribadi.
+      </p>
+
+    </div>
+
+    <div class="services-grid">
+
+      <div class="card">
+        <div class="card-icon">🖨️</div>
+        <h3>Cetak Banner</h3>
+        <p>Banner promosi berkualitas tinggi.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Desain Poster</h3>
+        <p>Poster modern untuk promosi bisnis.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💼</div>
+        <h3>Kartu Nama</h3>
+        <p>Kartu nama profesional dan elegan.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📄</div>
+        <h3>Stiker & Brosur</h3>
+        <p>Media promosi usaha yang menarik.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="about">
+
+  <div class="container about">
+
+    <img
+      src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+      alt="PrintKuy"
+    >
+
+    <div class="about-text">
+
+      <h2>Tentang PrintKuy</h2>
+
+      <p>
+        Platform jasa percetakan online
+        modern dan praktis.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Hubungi Kami</h2>
+
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>📞 WhatsApp</h3>
+        <p>0812-3456-7890</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>✉️ Email</h3>
+        <p>printkuy@gmail.com</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<section class="cek-section" id="cek">
+
+  <div class="container">
+
+    <div class="cek-card">
+
+      <h2>Cek Status Pesanan</h2>
+
+      <div class="form-group">
+        <input type="text" id="cekKode" placeholder="Masukkan Kode Pesanan">
+      </div>
+
+      <button onclick="cekPesanan()" class="submit-btn">
+        Cek Pesanan
+      </button>
+
+      <div id="hasilCek"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div class="popup" id="popup">
+
+  <div class="popup-content">
+
+    <h2>Pesanan Berhasil</h2>
+
+    <p>
+      Pesanan terkirim.<br>
+      Kami akan menghubungi Anda.
+    </p>
+
+    <div class="kode-box">
+
+      <span>Kode Pesanan:</span>
+
+      <h3 id="popupKode">
+        PKY0000
+      </h3>
+
+      <button class="copy-btn" onclick="copyKode()">
+        Salin Kode
+      </button>
+
+    </div>
+
+    <button class="tutup-btn" onclick="closePopup()">
+      Tutup
+    </button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
